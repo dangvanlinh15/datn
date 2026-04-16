@@ -1,0 +1,526 @@
+{
+  "province": [
+    {
+      "label": "Tất cả",
+      "value": ""
+    },
+    {
+      "value": "An Giang",
+      "label": "An Giang"
+    },
+    {
+      "value": "Biên Hoà",
+      "label": "Biên Hoà"
+    },
+    {
+      "value": "Buôn Ma Thuột",
+      "label": "Buôn Ma Thuột"
+    },
+    {
+      "value": "Bà Rịa",
+      "label": "Bà Rịa"
+    },
+    {
+      "value": "Bà Rịa - Vũng Tàu",
+      "label": "Bà Rịa - Vũng Tàu"
+    },
+    {
+      "value": "Bà Rịa Vũng Tàu",
+      "label": "Bà Rịa Vũng Tàu"
+    },
+    {
+      "value": "Bình Dương",
+      "label": "Bình Dương"
+    },
+    {
+      "value": "Bình Phước",
+      "label": "Bình Phước"
+    },
+    {
+      "value": "Bình Thuận",
+      "label": "Bình Thuận"
+    },
+    {
+      "value": "Bình Định",
+      "label": "Bình Định"
+    },
+    {
+      "value": "Bạc Liêu",
+      "label": "Bạc Liêu"
+    },
+    {
+      "value": "Bảo Lộc",
+      "label": "Bảo Lộc"
+    },
+    {
+      "value": "Bắc Giang",
+      "label": "Bắc Giang"
+    },
+    {
+      "value": "Bắc Ninh",
+      "label": "Bắc Ninh"
+    },
+    {
+      "value": "Bến Cát",
+      "label": "Bến Cát"
+    },
+    {
+      "value": "Bến Tre",
+      "label": "Bến Tre"
+    },
+    {
+      "value": "Cao Bằng",
+      "label": "Cao Bằng"
+    },
+    {
+      "value": "Cà Mau",
+      "label": "Cà Mau"
+    },
+    {
+      "value": "Cần Thơ",
+      "label": "Cần Thơ"
+    },
+    {
+      "value": "Dĩ An",
+      "label": "Dĩ An"
+    },
+    {
+      "value": "Gia Lai",
+      "label": "Gia Lai"
+    },
+    {
+      "value": "Hoà Bình",
+      "label": "Hoà Bình"
+    },
+    {
+      "value": "Huế",
+      "label": "Huế"
+    },
+    {
+      "value": "Hà Nam",
+      "label": "Hà Nam"
+    },
+    {
+      "value": "Hà Nội",
+      "label": "Hà Nội"
+    },
+    {
+      "value": "Hà Tĩnh",
+      "label": "Hà Tĩnh"
+    },
+    {
+      "value": "Hòa Bình",
+      "label": "Hòa Bình"
+    },
+    {
+      "value": "Hưng Yên",
+      "label": "Hưng Yên"
+    },
+    {
+      "value": "Hải Dương",
+      "label": "Hải Dương"
+    },
+    {
+      "value": "Hải Phòng",
+      "label": "Hải Phòng"
+    },
+    {
+      "value": "Hậu Giang",
+      "label": "Hậu Giang"
+    },
+    {
+      "value": "Hồ Chí Minh",
+      "label": "Hồ Chí Minh"
+    },
+    {
+      "value": "Hội An",
+      "label": "Hội An"
+    },
+    {
+      "value": "Khánh Hòa",
+      "label": "Khánh Hòa"
+    },
+    {
+      "value": "Kiên Giang",
+      "label": "Kiên Giang"
+    },
+    {
+      "value": "Kon Tum",
+      "label": "Kon Tum"
+    },
+    {
+      "value": "Long An",
+      "label": "Long An"
+    },
+    {
+      "value": "Long Khánh",
+      "label": "Long Khánh"
+    },
+    {
+      "value": "Lào Cai",
+      "label": "Lào Cai"
+    },
+    {
+      "value": "Lâm Đồng",
+      "label": "Lâm Đồng"
+    },
+    {
+      "value": "Nam Định",
+      "label": "Nam Định"
+    },
+    {
+      "value": "Nghệ An",
+      "label": "Nghệ An"
+    },
+    {
+      "value": "Nha Trang",
+      "label": "Nha Trang"
+    },
+    {
+      "value": "Ninh Bình",
+      "label": "Ninh Bình"
+    },
+    {
+      "value": "Ninh Thuận",
+      "label": "Ninh Thuận"
+    },
+    {
+      "value": "Phan Rang",
+      "label": "Phan Rang"
+    },
+    {
+      "value": "Phan Thiết",
+      "label": "Phan Thiết"
+    },
+    {
+      "value": "Phú Mỹ",
+      "label": "Phú Mỹ"
+    },
+    {
+      "value": "Phú Quốc",
+      "label": "Phú Quốc"
+    },
+    {
+      "value": "Phú Thọ",
+      "label": "Phú Thọ"
+    },
+    {
+      "value": "Phú Yên",
+      "label": "Phú Yên"
+    },
+    {
+      "value": "Phổ Yên",
+      "label": "Phổ Yên"
+    },
+    {
+      "value": "Phủ Lý",
+      "label": "Phủ Lý"
+    },
+    {
+      "value": "Pleiku",
+      "label": "Pleiku"
+    },
+    {
+      "value": "Quy Nhơn",
+      "label": "Quy Nhơn"
+    },
+    {
+      "value": "Quảng Bình",
+      "label": "Quảng Bình"
+    },
+    {
+      "value": "Quảng Nam",
+      "label": "Quảng Nam"
+    },
+    {
+      "value": "Quảng Ngãi",
+      "label": "Quảng Ngãi"
+    },
+    {
+      "value": "Quảng Ninh",
+      "label": "Quảng Ninh"
+    },
+    {
+      "value": "Quảng Trị",
+      "label": "Quảng Trị"
+    },
+    {
+      "value": "Rạch Giá",
+      "label": "Rạch Giá"
+    },
+    {
+      "value": "Sơn La",
+      "label": "Sơn La"
+    },
+    {
+      "value": "Thanh Hóa",
+      "label": "Thanh Hóa"
+    },
+    {
+      "value": "Thuận An",
+      "label": "Thuận An"
+    },
+    {
+      "value": "Thái Bình",
+      "label": "Thái Bình"
+    },
+    {
+      "value": "Thái Nguyên",
+      "label": "Thái Nguyên"
+    },
+    {
+      "value": "Thủ Dầu Một",
+      "label": "Thủ Dầu Một"
+    },
+    {
+      "value": "Thủ Đức",
+      "label": "Thủ Đức"
+    },
+    {
+      "value": "Thủy Nguyên",
+      "label": "Thủy Nguyên"
+    },
+    {
+      "value": "Thừa Thiên Huế",
+      "label": "Thừa Thiên Huế"
+    },
+    {
+      "value": "Tiền Giang",
+      "label": "Tiền Giang"
+    },
+    {
+      "value": "Trà Vinh",
+      "label": "Trà Vinh"
+    },
+    {
+      "value": "Tân Uyên",
+      "label": "Tân Uyên"
+    },
+    {
+      "value": "Tây Ninh",
+      "label": "Tây Ninh"
+    },
+    {
+      "value": "Tỉnh Bà Rịa - Vũng Tàu",
+      "label": "Tỉnh Bà Rịa - Vũng Tàu"
+    },
+    {
+      "value": "Từ Sơn",
+      "label": "Từ Sơn"
+    },
+    {
+      "value": "Vinh",
+      "label": "Vinh"
+    },
+    {
+      "value": "Vĩnh Long",
+      "label": "Vĩnh Long"
+    },
+    {
+      "value": "Vĩnh Phúc",
+      "label": "Vĩnh Phúc"
+    },
+    {
+      "value": "Vĩnh Yên",
+      "label": "Vĩnh Yên"
+    },
+    {
+      "value": "Vũng Tàu",
+      "label": "Vũng Tàu"
+    },
+    {
+      "value": "Đà Lạt",
+      "label": "Đà Lạt"
+    },
+    {
+      "value": "Đà Nẵng",
+      "label": "Đà Nẵng"
+    },
+    {
+      "value": "Đắk Lắk",
+      "label": "Đắk Lắk"
+    },
+    {
+      "value": "Đắk Nông",
+      "label": "Đắk Nông"
+    },
+    {
+      "value": "Đồng Nai",
+      "label": "Đồng Nai"
+    },
+    {
+      "value": "Đồng Tháp",
+      "label": "Đồng Tháp"
+    },
+    {
+      "value": "Đồng Xoài",
+      "label": "Đồng Xoài"
+    }
+  ],
+  "square": [
+    {
+      "label": "Tất cả",
+      "min": 0,
+      "max": 0
+    },
+    {
+      "label": "30 - 50",
+      "min": 30,
+      "max": 50
+    },
+    {
+      "label": "50 - 80",
+      "min": 50,
+      "max": 80
+    },
+    {
+      "label": "80 - 100",
+      "min": 80,
+      "max": 100
+    },
+    {
+      "label": "100 - 150",
+      "min": 100,
+      "max": 150
+    },
+    {
+      "label": "150 - 200",
+      "min": 150,
+      "max": 200
+    },
+    {
+      "label": "> 200",
+      "min": 200,
+      "max": null
+    }
+  ],
+  "price": [
+    {
+      "label": "Tất cả",
+      "min": 0,
+      "max": 0
+    },
+    {
+      "label": "500 triệu - 1 tỷ",
+      "min": 0.5,
+      "max": 1
+    },
+    {
+      "label": "1 tỷ - 1.5 tỷ",
+      "min": 1,
+      "max": 1.5
+    },
+    {
+      "label": "1.5 tỷ - 2 tỷ",
+      "min": 1.5,
+      "max": 2
+    },
+    {
+      "label": "2 tỷ - 3 tỷ",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "label": "3 tỷ - 5 tỷ",
+      "min": 3,
+      "max": 5
+    },
+    {
+      "label": "5 tỷ - 10 tỷ",
+      "min": 5,
+      "max": 10
+    },
+    {
+      "label": "10 tỷ - 20 tỷ",
+      "min": 10,
+      "max": 20
+    },
+    {
+      "label": "20 tỷ - 50 tỷ",
+      "min": 20,
+      "max": 50
+    },
+    {
+      "label": "50 tỷ - 100 tỷ",
+      "min": 50,
+      "max": 100
+    },
+    {
+      "label": "> 100 tỷ",
+      "min": 100,
+      "max": null
+    }
+  ],
+  "direct": [
+    {
+      "label": "Tất cả",
+      "value": ""
+    },
+    {
+      "label": "Đông",
+      "value": "Đông"
+    },
+    {
+      "label": "Tây",
+      "value": "Tây"
+    },
+    {
+      "label": "Nam",
+      "value": "Nam"
+    },
+    {
+      "label": "Bắc",
+      "value": "Bắc"
+    },
+    {
+      "label": "Đông Nam",
+      "value": "Đông Nam"
+    },
+    {
+      "label": "Đông Bắc",
+      "value": "Đông Bắc"
+    },
+    {
+      "label": "Tây Nam",
+      "value": "Tây Nam"
+    },
+    {
+      "label": "Tây Bắc",
+      "value": "Tây Bắc"
+    }
+  ],
+  "juridical": [
+    {
+      "value": "Sổ đỏ",
+      "label": "Sổ đỏ"
+    },
+    {
+      "value": "Sổ hồng",
+      "label": "Sổ hồng"
+    },
+    {
+      "value": "Giấy phép xây dựng",
+      "label": "Giấy phép xây dựng"
+    }
+  ],
+  "type": [
+    {
+      "value": "Mua bán",
+      "label": "Mua bán"
+    },
+    {
+      "value": "Cho thuê",
+      "label": "Cho thuê"
+    }
+  ],
+  "parking": [
+    {
+      "value": "có",
+      "label": "Yes"
+    },
+    {
+      "value": "không",
+      "label": "No"
+    }
+  ]
+}

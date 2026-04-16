@@ -1,0 +1,19 @@
+# Dockerfile dành cho Development (hot reload)
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Chỉ copy package.json để cài deps trước (tận dụng Docker layer cache)
+COPY package.json package-lock.json* ./
+RUN npm install
+
+# KHÔNG COPY source code ở đây — sẽ được mount từ host vào
+# nên mọi thay đổi code trên máy sẽ phản ánh ngay trong container
+
+EXPOSE 3000
+
+# Bật WATCHPACK_POLLING để hot reload hoạt động trên Windows/WSL2
+ENV WATCHPACK_POLLING=true
+ENV CHOKIDAR_USEPOLLING=true
+
+CMD ["npm", "start"]

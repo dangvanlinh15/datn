@@ -1,0 +1,265 @@
+@import "variables";
+.index {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    overflow-y: auto;
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.header {
+    display: flex;
+    color: white;
+    .img-banner {
+        position: relative;
+        flex: 1;
+        max-height: $height-header;
+    }
+    .options {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 0px;
+        .img-logo {
+            height: 100px;
+        }
+    }
+}
+
+.avatar {
+    background-color: $color-avatar;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggest-post {
+    border-radius: 10px;
+    border: 1px solid $color-border;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.suggest-post1 {
+    background-color: #acacac;
+}
+.title-suggest {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    width: 250px;
+}
+.title-suggest:hover {
+    text-decoration: underline !important;
+    color: black;
+}
+
+.filter {
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid $color-border;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.item {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid $color-border;
+    .content-item .title .text:hover {
+        text-decoration: underline;
+    }
+}
+
+.content-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.title {
+    text-decoration: none;
+}
+.text {
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+}
+.wrapper-square-direct {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+.wrapper-price-location {
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.wrapper-bedroom-parking-floor {
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    justify-content: space-between !important;
+}
+.wrapper-upload {
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    justify-content: space-between !important;
+}
+label {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.pages {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.icon {
+    height: 25px;
+    width: 25px !important;
+    margin-right: 5px;
+}
+.ic {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search {
+    flex: 1;
+}
+.filter-item {
+    width: 150px;
+}
+.btn-search {
+    min-width: 120px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around;
+}
+
+.title-sidebar {
+    text-align: center;
+}
+.left {
+    margin-right: 20px;
+}
+.content-sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.result {
+    margin-top: 20px;
+}
+.predict {
+    margin-bottom: 10px;
+}
+.required {
+    color: red;
+}
+
+.page:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.image-product {
+    max-height: 150px;
+    max-width: 200px;
+}
+.wrapper-image {
+    width: 200px !important;
+    margin-right: 10px;
+}
+
+.card-text {
+    margin-bottom: 0px;
+}
+.card-img-top {
+    height: 170px;
+}
+
+.main-detail {
+    margin: 20px 100px 100px 100px;
+}
+
+.main-detail-post {
+    border: 1px solid $color-border;
+    padding: 20px;
+    border-radius: 10px;
+    .image-slide {
+        border-radius: 10px;
+        img {
+            height: 400px !important;
+        }
+    }
+    .list-image {
+        border-radius: 10px;
+        .item-image {
+            width: 100px !important;
+        }
+    }
+    .left {
+        width: 50%;
+    }
+    .right {
+        flex: 1;
+        .font-weight-bold {
+            font-weight: 500;
+        }
+        .description,
+        .top-info {
+            border: 1px solid $color-border;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@import "variables";
+.message {
+    height: 100vh;
+}
+
+.container-message {
+    flex: 1;
+    display: flex;
+}
+.side-left-message {
+    flex: 1;
+    border-right: solid 1px #dadbdc;
+    .header-side-left {
+        position: relative;
+        padding: 10px;
+        height: $height-header-message;
+        display: flex;
+        border-bottom: solid 1px #dadbdc;
+        .icon-search {
+            position: absolute;
+            height: 18px;
+            top: 25px;
+            left: 20px;
+        }
+        .icon-add-member,
+        .icon-add-friend {
+            height: 18px;
+        }
+        input {
+            padding-left: 40px;
+        }
+    }
+}
+.side-right-message {
+    flex: 1;
+    border-left: solid 1px #dadbdc;
+    position: relative;
+    .header-side-right {
+        height: $height-header-message;
+        border-bottom: solid 1px #dadbdc;
+    }
+    .content-side-right {
+        .avatar {
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            font-size: 60px;
+        }
+        .storage-message {
+            width: 100%;
+            .image-video {
+                height: 80px;
+            }
+            .file {
+                .title-file {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+                .size-file {
+                    font-size: 12px;
+                    color: #65676b;
+                }
+                .ic-type-file {
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+.content-message {
+    width: 800px;
+}
+.main-message {
+    justify-content: flex-end;
+    flex-direction: column;
+    .conversation {
+        height: calc(
+            100vh - $height-header - $height-ip-message - $height-header-message
+        );
+        overflow-y: auto;
+        .name-sender {
+            font-size: 12px;
+            color: rgb(124, 121, 121);
+        }
+        .receive-messages {
+            width: 100%;
+            .text-message {
+                max-width: 250px;
+                background-color: #e4e6eb;
+                padding: 10px;
+                border-radius: 20px;
+                overflow-wrap: break-word;
+            }
+        }
+        .send-messages {
+            width: 100%;
+            .text-message {
+                max-width: 250px;
+                background-color: #0084ff;
+                color: white;
+                padding: 10px;
+                border-radius: 20px;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+    .ip-message {
+        border-top: solid 1px #dadbdc;
+        bottom: 0px;
+        .ic-image,
+        .ic-attach {
+            height: 25px;
+        }
+        .ic-like {
+            height: 32px;
+        }
+        .ic-emotion {
+            height: 30px;
+        }
+    }
+}
+.header-message {
+    height: $height-header-message;
+    border-bottom: solid 1px #dadbdc;
+    .call-facetime {
+        .icon-info {
+            height: 28px;
+        }
+        .icon-call {
+            height: 20px;
+        }
+        .icon-facetime {
+            height: 25px;
+        }
+    }
+    .avatar-header-chat img {
+        height: 40px;
+        width: 40px;
+    }
+}
+.label {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.status {
+    font-size: 12px;
+}
+
+.messager {
+    height: $height-messager;
+    border-bottom: solid 1px #dadbdc;
+}
+.text-opa {
+    color: #65676b;
+    font-size: 12px;
+}
+.time-end {
+    color: #65676b;
+    font-size: 12px;
+}

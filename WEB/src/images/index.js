@@ -1,0 +1,34 @@
+export const IC_BEDROOM = require("./icons/bedroom.png");
+export const IC_FLOOR = require("./icons/floor.png");
+export const IC_KITCHEN = require("./icons/kitchen.png");
+export const IC_BATHROOM = require("./icons/bathroom.png");
+export const IC_PARKING = require("./icons/parking.png");
+export const IC_PRICE = require("./icons/price.png");
+export const IC_SQUARE = require("./icons/square.png");
+export const IC_JURIDICAL = require("./icons/juridical.png");
+export const IC_ADDRESS = require("./icons/address.png");
+export const IC_CONTACT = require("./icons/contact.png");
+export const IC_DIRECTION = require("./icons/direction.png");
+export const IC_SIZE = require("./icons/size.png");
+export const IC_DATE = require("./icons/date.png");
+export const IC_DESCRIPTION = require("./icons/description.png");
+export const IC_SEARCH = require("./icons/search.png");
+export const IC_ADD_MEMBER = require("./icons/add-member.png");
+export const IC_ADD_FRIEND = require("./icons/add-friend.png");
+export const IC_CALL = require("./icons/call.png");
+export const IC_FACETIME = require("./icons/facetime.png");
+export const IC_INFO = require("./icons/info.png");
+export const IC_ATTACH = require("./icons/attach.png");
+export const IC_IMAGE = require("./icons/image.png");
+export const IC_LIKE = require("./icons/like.png");
+export const IC_EMOTION = require("./icons/emotion.png");
+
+export const IC_DOC = require("./icons/doc.png");
+export const IC_XLS = require("./icons/xls.png");
+export const IC_PPTX = require("./icons/pptx.png");
+export const IC_PDF = require("./icons/pdf.png");
+export const IC_MP3 = require("./icons/mp3.png");
+
+export const IMG_BANNER = require("./banner.png");
+export const IMG_APP = require("./logo-app.png");
+export const IMG_HOME_DEFAULT = require("./home-default.jpg");

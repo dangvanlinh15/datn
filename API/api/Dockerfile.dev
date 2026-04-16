@@ -1,0 +1,45 @@
+# =============================================
+# Dockerfile.dev - Hot-reload cho Windows/Docker
+# =============================================
+
+FROM maven:3.9.6-eclipse-temurin-17
+
+WORKDIR /app
+
+# Copy pom.xml first to cache dependencies
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
+
+# Copy source
+COPY src ./src
+
+# Create polling script for Windows host compatibility
+# Docker for Windows volume mounts don't trigger inotify events properly.
+# We will use md5sum polling to detect file changes every 3 seconds.
+RUN echo '#!/bin/bash\n\
+echo "=== File polling watcher started for Windows compatibility ==="\n\
+last_sum=""\n\
+while true; do\n\
+  # Calculate hash of all .java files\n\
+  current_sum=$(find /app/src -name "*.java" -type f -exec md5sum {} + | sort | md5sum)\n\
+  if [ "$current_sum" != "$last_sum" ]; then\n\
+      if [ -n "$last_sum" ]; then\n\
+          echo "=== Code change detected! Compiling... ==="\n\
+          mvn compile -DskipTests -q\n\
+      fi\n\
+      last_sum=$current_sum\n\
+  fi\n\
+  sleep 3\n\
+done' > /app/watch.sh && chmod +x /app/watch.sh
+
+# Create entrypoint
+RUN echo '#!/bin/bash\n\
+echo "=== Initial compile... ==="\n\
+mvn compile -DskipTests -q\n\
+/app/watch.sh &\n\
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dspring.devtools.restart.enabled=true -Dspring.devtools.restart.pollInterval=2s"\n\
+' > /app/entrypoint.sh && chmod +x /app/entrypoint.sh
+
+EXPOSE 8080
+
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
