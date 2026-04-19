@@ -1,0 +1,24 @@
+FROM node:18-alpine
+
+# Cài đặt thư mục làm việc
+WORKDIR /app
+
+# Copy các file quản lý package
+COPY package*.json ./
+
+# Cài đặt toàn bộ dependencies
+RUN npm install
+
+# Copy phần còn lại của source code
+# (Lưu ý: khi chạy với docker run -v, bước này có thể bị ghi đè bởi thư mục hiện tại)
+COPY . .
+
+# Bật polling để Next.js detect file changes trên Docker/Windows
+ENV WATCHPACK_POLLING=true
+ENV CHOKIDAR_USEPOLLING=true
+
+# Expose port Next.js
+EXPOSE 3000
+
+# Khởi chạy ứng dụng ở chế độ development
+CMD ["npm", "run", "dev"]

@@ -89,7 +89,7 @@ export const MainPost = memo(() => {
         phone_contact: phone,
         date: formattedDate,
         direct: postInfo.direct,
-        district: postInfo.address,
+        address: postInfo.address,
         floor: postInfo.floor,
         juridical: postInfo.juridical,
         bedroom: postInfo.bedroom,
@@ -175,47 +175,16 @@ export const MainPost = memo(() => {
           <label>
             Address <span className="require">*</span>
           </label>
-          <div className="row">
-            <div className="form-group col-3">
-              <Select
-                defaultValue=""
-                defaultName="City/Province"
-                listItems={data.province}
-                changeSelect={changePostInfo}
-                keyName="province"
-              />
-            </div>
-            <div className="form-group col-3">
-              <Select
-                defaultValue=""
-                defaultName="District"
-                listItems={data.province}
-                changeSelect={changePostInfo}
-                keyName="district"
-                disable={addressDisable.district}
-              />
-            </div>
-            <div className="form-group col-3">
-              <Select
-                defaultValue=""
-                defaultName="Ward"
-                listItems={data.province}
-                changeSelect={changePostInfo}
-                keyName="ward"
-                disable={addressDisable.ward}
-              />
-            </div>
-            <div className="form-group col-3">
-              <Select
-                defaultValue=""
-                defaultName="Street"
-                listItems={data.province}
-                changeSelect={changePostInfo}
-                keyName="street"
-                disable={addressDisable.street}
-              />
-            </div>
-          </div>
+          <Input
+            type="text"
+            placeholder="Enter full address (e.g. 123 Nguyễn Trãi, Hà Nội)"
+            id="id-address"
+            label=""
+            val={postInfo.address}
+            changeInput={changePostInfo}
+            keyName="address"
+            required={true}
+          />
         </div>
         <hr />
         <div className="row">

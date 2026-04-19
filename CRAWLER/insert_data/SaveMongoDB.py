@@ -11,7 +11,9 @@ try:
     db = client['test']
     file_path = 'all_data_after_deduplication.csv'
     data = pd.read_csv(file_path,  encoding = 'utf-8')
+    data = data.sample(frac=1).reset_index(drop=True)
     data_dict = data.to_dict(orient='records')
+    print("data_dict", data_dict)
     # Chọn hoặc tạo một collection trong MongoDB
     collection = db['posts']
     # # Insert dữ liệu vào MongoDB
