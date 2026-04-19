@@ -33,10 +33,8 @@ public class Posts {
     private  String phone_contact;
     private  String date;
     private  String direct;
-    private  String district;
+    private  String address;
     private  String province;
-    private  String street;
-    private  String ward;
     private  String floor;
     private  String juridical;
     private  String bedroom;

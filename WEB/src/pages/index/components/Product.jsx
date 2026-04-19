@@ -72,10 +72,7 @@ export const Product = memo(({ item }) => {
           <div className="address">
             <img className="icon" src={IC_ADDRESS} alt="notfound" />
             <label>Address :</label>
-            {item.street === "None" ? "" : item.street + " Street, "}
-            {item.ward === "None" ? "" : item.ward + " Ward, "}
-            {item.district === "None" ? "" : item.district + " District, "}
-            {item.province === "None" ? "" : item.province + " City."}
+            {item.address === "None" ? "" : item.address}
           </div>
         </div>
         <div className="wrapper-bedroom-parking-floor">

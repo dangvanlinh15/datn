@@ -167,8 +167,7 @@ export const MainDetailPost = memo(() => {
             <div className="row my-3">
               <div className="address col-12 font-weight-bold">
                 <img src={IC_ADDRESS} alt="not-found" className="icon" />
-                Address: {item.street} Street , {item.ward} Ward,{" "}
-                {item.district} District , {item.province} City
+                Address: {item.address}
               </div>
             </div>
             <div className="row my-3">
