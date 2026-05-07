@@ -10,7 +10,7 @@ export const SideRightMessage = memo(({ name, time }) => {
                 <div className="avatar d-flex justify-content-center align-content-center mx-2 my-2">
                     M
                 </div>
-                <div className="label">Trần Bá Mạnh</div>
+                <div className="label">Đặng Văn Linh</div>
                 <div className="status mb-4">Hoạt động 3h trước</div>
                 <div className="storage-message">
                     <div

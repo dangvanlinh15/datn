@@ -1,75 +1,91 @@
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { IC_ATTACH, IC_EMOTION, IC_IMAGE, IC_LIKE } from "../../../images";
-import { useSelector } from "react-redux";
-import moment from "moment";
 
-const formatDate = "YYYY-MM-DD HH:mm:ss";
-
-export const MainMessage = memo(({ sendMessage, messages }) => {
-    const user = useSelector((state) => state.auth.user);
+export const MainMessage = memo(({ sendMessage, messages, currentUser, activeMessager }) => {
     const [message, setMessage] = useState("");
+    const conversationRef = useRef(null);
+    const getSenderPhone = useCallback((item) => {
+        if (item.senderId === currentUser.id) {
+            return currentUser.phone;
+        }
+        if (item.senderId === activeMessager?.userId) {
+            return activeMessager?.phone;
+        }
+        return "";
+    }, [activeMessager, currentUser]);
+
+    useEffect(() => {
+        if (conversationRef.current) {
+            conversationRef.current.scrollTop = conversationRef.current.scrollHeight;
+        }
+    }, [messages]);
 
     const onKey = useCallback(
         (event) => {
-            if (event.keyCode == 13) {
+            if (event.keyCode === 13 && !event.shiftKey) {
+                if (!message.trim() || !activeMessager) {
+                    event.preventDefault();
+                    return;
+                }
+
                 let val = {
-                    username: user.username,
-                    sender: user.lastName,
-                    content: event.target.value.trim(),
-                    date: moment(new Date()).format(formatDate),
-                    type: "JOIN",
+                    senderId: currentUser.id,
+                    senderName: currentUser.name,
+                    recipientId: activeMessager.userId,
+                    recipientName: activeMessager.name,
+                    content: message.trim(),
                 };
-                setMessage(val);
 
                 event.preventDefault();
                 sendMessage(val);
                 setMessage("");
             }
         },
-        [message]
+        [activeMessager, currentUser, message, sendMessage]
     );
 
     const changeMessage = useCallback(
         (event) => {
             setMessage(event.target.value);
         },
-        [message]
+        []
     );
 
     return (
         <div className="main-message d-flex">
-            <div className="conversation d-flex flex-column p-2">
+            <div className="conversation d-flex flex-column p-2" ref={conversationRef}>
+                {!activeMessager && (
+                    <div className="empty-message d-flex align-items-center justify-content-center">
+                        Chọn một khách hàng để bắt đầu trò chuyện
+                    </div>
+                )}
                 {messages.map((item, index) => {
                     return (
                         <div key={index}>
-                            {item.username == user.username ? (
-                                <div
-                                    className="send-messages d-flex justify-content-end my-2"
-                                    key={index}
-                                >
+                            {item.senderId === currentUser.id ? (
+                                <div className="send-messages d-flex justify-content-end my-2">
                                     <div className="d-flex flex-column">
                                         <div className="name-sender align-self-end mx-1">
-                                            {item.sender}
+                                            {item.senderName}
+                                            {getSenderPhone(item) ? ` - ${getSenderPhone(item)}` : ""}
                                         </div>
                                         <div className="text-message">
                                             {item.content}
                                         </div>
                                     </div>
                                     <div className="avatar d-flex justify-content-center align-content-center align-self-end mx-2">
-                                        {item.sender[0]}
+                                        {(item.senderName || "K")[0]}
                                     </div>
                                 </div>
                             ) : (
-                                <div
-                                    className="receive-messages d-flex my-2 justify-content-start"
-                                    key={index}
-                                >
+                                <div className="receive-messages d-flex my-2 justify-content-start">
                                     <div className="avatar d-flex justify-content-center align-content-center align-self-end mx-2">
-                                        {item.sender[0]}
+                                        {(item.senderName || "K")[0]}
                                     </div>
                                     <div className="d-flex flex-column">
                                         <div className="name-sender align-self-start mx-">
-                                            {item.sender}
+                                            {item.senderName}
+                                            {getSenderPhone(item) ? ` - ${getSenderPhone(item)}` : ""}
                                         </div>
                                         <div className="text-message">
                                             {item.content}
@@ -106,6 +122,7 @@ export const MainMessage = memo(({ sendMessage, messages }) => {
                     value={message}
                     col={1}
                     placeholder="Aa"
+                    disabled={!activeMessager}
                     onChange={changeMessage}
                     onKeyDown={onKey}
                 />

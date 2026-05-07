@@ -2,11 +2,19 @@ import { memo, useCallback, useState } from "react";
 import { IC_ADD_FRIEND, IC_ADD_MEMBER, IC_SEARCH } from "../../../images";
 import { Messager } from "./Messager";
 
-export const SideLeftMessage = memo(( {messagers} ) => {
+export const SideLeftMessage = memo(({ messagers, activeMessager, onSelectMessager }) => {
     const [search, setSearch] = useState('')
     const changeInputSearch = useCallback((event) => {
         setSearch(event.target.value)
-    }, [search])
+    }, [])
+
+    const filteredMessagers = messagers.filter((item) => {
+        const keyword = search.toLowerCase();
+        return (
+            item.name?.toLowerCase().includes(keyword) ||
+            item.phone?.toLowerCase().includes(keyword)
+        );
+    });
 
     return (
         <div className="side-left-message">
@@ -18,8 +26,15 @@ export const SideLeftMessage = memo(( {messagers} ) => {
             </div>
             <div className="content-side-left overflow-auto">
                 {
-                    messagers.map((item, index) => {
-                        return(<Messager name={item.name} time={item.time} endMessage={item.endMessage} key={index}/>)
+                    filteredMessagers.map((item) => {
+                        return(
+                            <Messager
+                                messager={item}
+                                isActive={activeMessager?.userId === item.userId}
+                                onClick={() => onSelectMessager(item)}
+                                key={item.userId}
+                            />
+                        )
                     })
                 }
             </div>

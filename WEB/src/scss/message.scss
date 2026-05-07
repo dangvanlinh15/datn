@@ -150,6 +150,12 @@
 .messager {
     height: $height-messager;
     border-bottom: solid 1px #dadbdc;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &.active,
+    &:hover {
+        background-color: #eef5ff;
+    }
 }
 .text-opa {
     color: #65676b;
@@ -158,4 +164,9 @@
 .time-end {
     color: #65676b;
     font-size: 12px;
+}
+.empty-message {
+    flex: 1;
+    color: #65676b;
+    font-size: 14px;
 }

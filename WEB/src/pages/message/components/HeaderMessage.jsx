@@ -1,8 +1,9 @@
 import { memo, useCallback } from "react";
 import { IC_CALL, IC_FACETIME, IC_INFO, IMG_APP } from "../../../images";
 
-export const HeaderMessage = memo(() => {
+export const HeaderMessage = memo(({ activeMessager, connected }) => {
     const handleInfo = useCallback(() => {}, []);
+    const name = activeMessager?.name || "Chat khách hàng";
     return (
         <div className="header-message d-flex align-items-center justify-content-between p-3">
             <div className="d-flex align-items-center">
@@ -10,10 +11,11 @@ export const HeaderMessage = memo(() => {
                     <img src={IMG_APP} />
                 </div>
                 <div className="messager mx-2 d-flex flex-column justify-content-center">
-                    <div className="label">Chat Room</div>
+                    <div className="label">{name}</div>
                     <div className="status">
                         <span className="active"></span>
-                        Đang hoạt động
+                        {activeMessager?.phone ? `${activeMessager.phone} - ` : ""}
+                        {connected ? "Đang hoạt động" : "Đang kết nối"}
                     </div>
                 </div>
             </div>

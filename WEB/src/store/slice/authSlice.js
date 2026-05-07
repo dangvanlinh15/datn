@@ -67,7 +67,13 @@ export const getInfoUser = createAsyncThunk(
 );
 export const logout = () => {
   storage1.removeItem("token");
+  storage1.removeItem("id");
   storage1.removeItem("email");
+  storage1.removeItem("firstName");
+  storage1.removeItem("lastName");
+  storage1.removeItem("phone");
+  storage1.removeItem("citizenIdentification");
+  storage1.removeItem("location");
 };
 
 export const authSlice = createSlice({
@@ -91,6 +97,7 @@ export const authSlice = createSlice({
         state.code = action.payload.code;
         console.log(action.payload)
         storage1.setItem("token", action.payload.email);
+        storage1.setItem("id", action.payload.id);
         storage1.setItem("email", action.payload.email);
         storage1.setItem("firstName", action.payload.firstName);
         storage1.setItem("lastName", action.payload.lastName);
